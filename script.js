@@ -8,25 +8,23 @@ function number(event)
     const button = event.target;
     output.value = button.innerHTML;
     firstNum = +button.innerHTML;
-    console.log(button.id);
+    //console.log(button.id);
 }
 
 const add = (event) =>
 {
     const output = document.getElementById("output");
-    const buttonPressedId = event.target.id;
-
-    if(result == 0)
+    //const buttonPressedId = event.target;
+    if(output.value == "")
     {
-        output.value = "Please enter a number";
-        return;
-    } 
+        console.log('ps')
+    }
 }
 
 
 const equals = (string) =>
 {
-    
+
 }
 
 
