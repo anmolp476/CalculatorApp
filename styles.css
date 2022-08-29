@@ -4,7 +4,7 @@
 {
     padding: 2px;
     border: 2px solid red;
-    width: 9vw;
+    width: 120px;
     display: flex;
     flex-direction: column;
     background-color: purple;
