@@ -1,3 +1,6 @@
+let currentNum = 0;
+
+
 const add = (num1, num2) =>
 {
     return num1+num2;
@@ -40,3 +43,18 @@ const operate = (operator, num1, num2) =>
             break;
     }
 }
+
+let numButtons = document.querySelectorAll(".num");
+
+numButtons.forEach((button) =>
+{
+    button.addEventListener('click', (e) =>
+    {
+        console.log(e.target);
+    });
+});
+
+
+
+
+
