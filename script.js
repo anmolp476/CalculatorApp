@@ -1,30 +1,42 @@
-let result = 0;
-let firstNum = 0;
-let secondNum = 0;
-
-function number(event)
+const add = (num1, num2) =>
 {
-    const output = document.getElementById("output");
-    const button = event.target;
-    output.value = button.innerHTML;
-    firstNum = +button.innerHTML;
-    //console.log(button.id);
+    return num1+num2;
 }
 
-const add = (event) =>
+const subtract = (num1, num2) =>
 {
-    const output = document.getElementById("output");
-    //const buttonPressedId = event.target;
-    if(output.value == "")
+    return num1-num2;
+}
+
+const multiply = (num1, num2) =>
+{
+    return num1*num2;
+}
+
+const divide = (num1, num2) =>
+{
+    return num1/num2;
+}
+
+
+const operate = (operator, num1, num2) =>
+{
+    switch(operator)
     {
-        console.log('ps')
+        case "+":
+            return sum(num1, num2);
+            break;
+        case "-":
+            return subtract(num1, num2);
+            break;
+        case "x":
+            return multiply(num1, num2);
+            break;
+        case "/":
+            return divide(num1, num2);
+            break;
+        default:
+            return null;
+            break;
     }
 }
-
-
-const equals = (string) =>
-{
-
-}
-
-
