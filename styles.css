@@ -10,11 +10,12 @@
     background-color: purple;
 }
 
-#output
+.output
 {
     margin: 0.5em;
     background-color: white;
     font-size: 10px;
+    text-align: right;
 }
 
 /* This is the div that contains all the buttons */
