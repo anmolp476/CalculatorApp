@@ -51,9 +51,9 @@ function clearDisplay()
 }
 
 //View
-let display = document.querySelector(".output")
+const display = document.querySelector(".output")
 
-let numButtons = document.querySelectorAll(".num");
+const numButtons = document.querySelectorAll(".num");
 
 numButtons.forEach((button) =>
 {
@@ -64,7 +64,17 @@ numButtons.forEach((button) =>
     });
 });
 
+//Controllers
+const opButtons = document.querySelectorAll(".operation")
 
+opButtons.forEach((button) =>
+{
+    button.addEventListener('click', (e) =>
+    {
+        const currentButton = e.target;
+        console.log(currentButton);
+    });
+});
 
 
 
