@@ -3,8 +3,8 @@
 .container
 {
     padding: 2px;
-    border: 2px solid red;
-    width: 120px;
+    /* border: 2px solid red; */
+    width: 114px;
     display: flex;
     flex-direction: column;
     background-color: purple;
@@ -20,7 +20,7 @@
 /* This is the div that contains all the buttons */
 .button-container
 {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
 }
@@ -28,12 +28,13 @@
 /* This is the div that contains only the numerical buttons */
 .number-buttons
 {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: grid;
     grid-template-columns: repeat(3, 30px);
     grid-template-rows: repeat(3, 22px);
 }
 
+/* This is the zero button styling */
 .zero
 {
     width: 300%;
@@ -45,11 +46,5 @@
     /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
-}
-
-.operation-buttons button
-{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;    
 }
