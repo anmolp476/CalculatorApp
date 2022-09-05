@@ -1,3 +1,7 @@
+let currentNum = 0;
+let currentOperation = "";
+let buttonPressed = false;
+
 //Model
 const add = (num1, num2) =>
 {
@@ -48,6 +52,7 @@ function clearDisplay()
     console.log("clear");
     const displayClear = document.querySelector(".output");
     displayClear.value = "";
+    currentNum = 0;
 }
 
 //View
@@ -60,7 +65,16 @@ numButtons.forEach((button) =>
     button.addEventListener('click', (e) =>
     {
         const currentButton = e.target;
-        display.value += currentButton.innerText;
+        if(buttonPressed)
+        {
+            display.value = "";
+            display.value = currentButton.innerText;
+            buttonPressed = false;
+        }
+        else
+        {
+            display.value += currentButton.innerText;
+        }
     });
 });
 
@@ -72,7 +86,10 @@ opButtons.forEach((button) =>
     button.addEventListener('click', (e) =>
     {
         const currentButton = e.target;
-        console.log(currentButton);
+        currentOperation = currentButton.innerText;
+        currentNum = display.value;
+        buttonPressed = true;
+        console.log(currentNum);
     });
 });
 
