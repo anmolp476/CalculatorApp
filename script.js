@@ -1,5 +1,5 @@
-let currentNum = 0;
-let currentOperation = "";
+let pastNum = 0;
+let pastOperation = "";
 let buttonPressed = false;
 
 //Model
@@ -29,7 +29,7 @@ const operate = (operator, num1, num2) =>
     switch(operator)
     {
         case "+":
-            return sum(num1, num2);
+            return add(num1, num2);
             break;
         case "-":
             return subtract(num1, num2);
@@ -38,6 +38,8 @@ const operate = (operator, num1, num2) =>
             return multiply(num1, num2);
             break;
         case "/":
+            if(num2===0)
+                return "...divide by 0? Nice.";
             return divide(num1, num2);
             break;
         default:
@@ -70,6 +72,7 @@ numButtons.forEach((button) =>
             display.value = "";
             display.value = currentButton.innerText;
             buttonPressed = false;
+            console.log(pastOperation, pastNum);
         }
         else
         {
@@ -86,13 +89,18 @@ opButtons.forEach((button) =>
     button.addEventListener('click', (e) =>
     {
         const currentButton = e.target;
-        currentOperation = currentButton.innerText;
-        currentNum = display.value;
+        pastOperation = currentButton.innerText;
+        pastNum = display.value;
         buttonPressed = true;
-        console.log(currentNum);
+        console.log(pastNum);
     });
 });
 
-
+const calculation = () =>
+{
+    let newPastNum = +pastNum;
+    let newDisplayNum = +display.value;
+    display.value = operate(pastOperation, newPastNum, newDisplayNum);
+}
 
 
