@@ -1,6 +1,4 @@
-let currentNum = 0;
-
-
+//Model
 const add = (num1, num2) =>
 {
     return num1+num2;
@@ -44,15 +42,28 @@ const operate = (operator, num1, num2) =>
     }
 }
 
+//Function for the clear button
+function clearDisplay()
+{
+    console.log("clear");
+    const displayClear = document.querySelector(".output");
+    displayClear.value = "";
+}
+
+//View
+let display = document.querySelector(".output")
+
 let numButtons = document.querySelectorAll(".num");
 
 numButtons.forEach((button) =>
 {
     button.addEventListener('click', (e) =>
     {
-        console.log(e.target);
+        const currentButton = e.target;
+        display.value += currentButton.innerText;
     });
 });
+
 
 
 
