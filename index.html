@@ -9,10 +9,11 @@
 
     <body>
 
-        <div class="container">
+        <main class="container">
             <input id="output" type="text" disabled>
-            <div class="button-container">
-                <div class="number-buttons">
+            <button class=".clear">Clear</button>
+            <section class="button-container">
+                <section class="number-buttons">
                     <button onclick="number(event)" class="one">1</button>
                     <button onclick="number(event)" class="two">2</button>
                     <button onclick="number(event)" class="three">3</button>
@@ -23,16 +24,16 @@
                     <button onclick="number(event)" class="eight">8</button>
                     <button onclick="number(event)" class="nine">9</button>
                     <button onclick="number(event)" class="zero">0</button>
-                </div>
-                <div class="operation-buttons">
-                    <button onclick="add()">+</button>
+                </section>
+                <section class="operation-buttons">
+                    <button id='dickhead' onclick="add(event)">+</button>
                     <button>-</button>
                     <button>x</button>
                     <button>/</button>
-                    <button>=</button>
-                </div>
-            </div>
-        </div>
+                    <button onclick="equals()">=</button>
+                </section>
+            </section>
+        </main>
         
     </body>
 </html>
